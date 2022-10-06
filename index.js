@@ -7,10 +7,10 @@ const { Server } = require("socket.io");
 app.use(cors());
 
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "nodedb",
+  host: "sql6.freemysqlhosting.net",
+  user: "sql6524414",
+  password: "AhLBp5RM39",
+  database: "sql6524414",
 });
 db.connect(function (error) {
   
