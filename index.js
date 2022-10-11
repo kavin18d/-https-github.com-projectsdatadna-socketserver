@@ -4,7 +4,9 @@ const http = require("http");
 const cors = require("cors");
 const mysql = require("mysql");
 const { Server } = require("socket.io");
-app.use(cors());
+app.use(cors({
+  origin: "https://socketfullproject.herokuapp.com",
+  ));
 app.use(function(req,res,next){
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-control-Allow-Methods', 'GET,POSt');
