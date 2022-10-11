@@ -7,7 +7,11 @@ const { Server } = require("socket.io");
 app.use(cors());
 app.use(function(req,res,next){
   res.setHeader('Access-Control-Allow-Origin', '*');
-})
+  res.setHeader('Access-control-Allow-Methods', 'GET,POSt');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
+});
 
 const db = mysql.createConnection({
   host: "sql6.freemysqlhosting.net",
