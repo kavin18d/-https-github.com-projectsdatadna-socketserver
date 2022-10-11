@@ -5,6 +5,9 @@ const cors = require("cors");
 const mysql = require("mysql");
 const { Server } = require("socket.io");
 app.use(cors());
+app.use(function(req,res,next){
+  res.setHeader('Access-Control-Allow-Origin', '*');
+})
 
 const db = mysql.createConnection({
   host: "sql6.freemysqlhosting.net",
